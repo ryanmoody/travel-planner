@@ -1,1 +1,2 @@
-# travel-planner
+# Travel Planner
+A simple application for travel planning.
