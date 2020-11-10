@@ -1,0 +1,14 @@
+.footer {
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  height: 60px;
+  justify-content: flex-start;
+  padding: 0 1em;
+
+  p {
+    font-size: .8rem;
+    font-weight: 300;
+  }
+}

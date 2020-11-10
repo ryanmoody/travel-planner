@@ -4,8 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d98b222257.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Travel Planner</h1>
+    <div class="wrapper">
+      <header class="header">
+        <a class="logo">
+          <i class="fas fa-route fa-lg"></i>
+          <p class="logo__text">Travel Planner</p>
+        </a>
+      </header>
+      <main class="main">
+        <div class="container">
+          <section class="search-panel">
+            <h1 class="heading">Where would you like to go?</h1>
+            <form class="form">
+              <fieldset class="form__fieldset">
+                <label class="form__label" for="destination">Location</label>
+                <input class="form__input" type="text" id="destination" placeholder="e.g. New York, London, San Francisco">
+              </fieldset>
+              <div class="form__date-group">
+                <fieldset class="form__fieldset">
+                  <label class="form__label" for="start-date">Start Date</label>
+                  <input class="form__input" type="date" id="start-date">
+                </fieldset>
+                <fieldset class="form__fieldset">
+                  <label class="form__label" for="end-date">End Date</label>
+                  <input class="form__input" type="date" id="end-date">
+                </fieldset>
+              </div>
+              <input class="form__submit" type="submit" value="Start Plan">
+            </form>
+          </section>
+          <section class="results-panel" hidden>
+            <h1 class="heading">Here's your travel plan...</h1>
+            <div class="card flex-column">
+              <div class="card__header flex-row">
+                <div class="card__header--destination">
+                  <p class="city">City</p>
+                  <p class="country">Country</p>
+                </div>
+                <div class="card__header--weather">
+                  <p class="weather-type"></p>
+                  <p class="temperature"></p></span>
+                  <p class="description"></p>
+                </div>
+              </div>
+              <div class="card__countdown">
+                <p class="countdown"></p>
+              </div>
+              <div class="card__footer">
+                <div class="departing">
+                  <p class="start-date__label">Departing</p>
+                  <p class="start-date__text">--</p>
+                </div>
+                <div class="returning">
+                  <p class="end-date__label">Returning</p>
+                  <p class="end-date__text">--</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <p>&copy; 2020 Ryan Moody</p>
+      </footer>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js")
+        });
+      }
+    </script>
   </body>
 </html>
