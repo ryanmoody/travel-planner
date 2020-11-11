@@ -1,16 +1,16 @@
 # Travel Planner
-A simple application for travel planning.
+This application is my project submitted for Udacity's Front End Web Developer Nanodegree.
 
 ## Instructions
+Add the following to an `.env` file in the root of the project:
 
-Add API keys to the .env file:
+```	
+GEONAMES_API_USERNAME=username
+WEATHERBIT_API_KEY=key
+PIXABAY_API_KEY=key
+```
 
-`
-GEONAMES_API_USERNAME=[key]
-WEATHERBIT_API_KEY=[key]
-PIXABAY_API_KEY=[key]
-`
-
-For development run `npm run server` and `npm run dev` in the console.
-
-For production run `npm run build` and `npm run start` in the console.
+Run the following commands in the terminal:
+ 1. `npm install`
+ 2. `npm run build`
+ 3. `npm run start`
